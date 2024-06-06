@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela de Login</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url('https://wallpapers.com/images/hd/bakery-goods-pattern-m0gw8vwynjueexax.jpg'); /* Substitua pela URL da sua imagem */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      div {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 5%;
+        border-radius: 30px;
+        color: white;
+      }
+      input {
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 20px;
+      }
+      button {
+        background-color: rgb(240, 136, 217);
+        padding: 15px;
+        border: none;
+        width: 79%;
+        position: relative;
+        top: 20px;
+        left: 0%;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function redirectToIndex() {
+        var nome = document.getElementById("nome").value;
+        var senha = document.getElementById("senha").value;
+
+        if (nome === "" || senha === "") {
+          alert("Por favor, preencha todos os campos.");
+          return false;
+        } else {
+          window.location.href = "Home.html";
+        }
+      }
+    </script>
+</head>
+<body>
+    <div class="tela de login">
+        <h1>Login</h1>
+        <input type="text" id="nome" placeholder="Nome">
+        <br><br>
+        <input type="password" id="senha" placeholder="Senha">
+        <button onclick="redirectToIndex()">Enviar</button>
+    </div>
+</body>
+</html>
